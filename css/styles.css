@@ -17,17 +17,18 @@ Date: 06/20/2025
  /* Fonts */
 
  /* Desktop Media Query */
- @media only all and (min-width: 1024px) {
-  /* Enable tab-desk, disable mobile */
-  .tab-desk
-  {
-    display: block;
-  } 
-  .mobile
-  {
-    display: none;
-  }
-  .content {
+ @media only all and (min-width: 721px) {
+
+   /* Enable tab-desk, disable mobile */
+   .tab-desk {
+     display: block;
+   }
+
+   .mobile {
+     display: none;
+   }
+
+   .content {
      margin-left: 150px;
    }
 
@@ -391,21 +392,40 @@ Date: 06/20/2025
      text-align: left;
    }
 
-   label {
-     display: block;
-     margin-bottom: 0.3em;
-     font-weight: bold;
-     text-align: left;
+   fieldset {
+     border: 2px solid #ccc;
+     padding: 16px;
+     margin-bottom: 20px;
+     border-radius: 6px;
+     max-width: 540px;
    }
 
-   input,
-   textarea {
-     width: 100%;
-     padding: 0.6em;
-     margin-bottom: 1em;
-     border: 1px solid black;
+   /* Legend styling */
+   legend {
+     font-weight: bold;
+     padding: 4px 10px;
+     border: 1px solid #999;
+     background-color: #f3f3f3;
      border-radius: 4px;
+   }
+
+   /* Input sizing */
+   input[type="text"],
+   input[type="email"],
+   input[type="tel"],
+   select,
+   textarea {
+     width: 500px;
+     max-width: 100%;
      box-sizing: border-box;
+     margin-bottom: 12px;
+   }
+
+   /* Radio and checkbox alignment */
+   input[type="radio"],
+   input[type="checkbox"] {
+     margin-left: 8px;
+     vertical-align: middle;
    }
 
    button {
@@ -424,17 +444,16 @@ Date: 06/20/2025
  }
 
  /* Mobile Media Query */
- @media only all and (max-width: 720px)
-{
-  /* Disable tab-desk, enable mobile */
-  #tab-desk
-  {
-    display: none;
-  }
-  #mobile
-  {
-    display: block;
-  }
+ @media only all and (max-width: 720px) {
+
+   /* Disable tab-desk, enable mobile */
+   .tab-desk {
+     display: none;
+   }
+
+   .mobile {
+     display: block;
+   }
 
    /* Navigation Rules for tab-desk */
    .main-nav {
@@ -447,15 +466,18 @@ Date: 06/20/2025
      text-align: center;
      border-bottom: black solid 1px;
    }
+
    .main-nav li {
      position: relative;
    }
+
    .main-nav a {
      display: block;
      padding: 10px 15px;
      color: white;
      text-decoration: none;
    }
+
    /*Style Rules for headers and its elements */
    header {
      background-color: #A299B0;
@@ -629,6 +651,7 @@ Date: 06/20/2025
    .examples {
      list-style-type: none;
    }
+
    /* Styles for shopping class */
    .shopping {
      list-style-type: none;
@@ -735,4 +758,4 @@ Date: 06/20/2025
    button:hover {
      background-color: pink;
    }
-}
+ }
